@@ -16,4 +16,6 @@ ARG HUGO_VERSION
 
 COPY --from=fetcher /tmp/hugo /usr/local/bin/hugo
 
+WORKDIR /data/hugo
+
 ENTRYPOINT ["/usr/local/bin/hugo"]
