@@ -10,6 +10,8 @@ RUN apt update && apt install -y curl \
 
 FROM scratch
 
+MAINTAINER Guido Pili <me@gpili.dev>
+
 ARG HUGO_VERSION
 
 COPY --from=fetcher /tmp/hugo_${HUGO_VERSION}_Linux-64bit.tar.gz /usr/local/bin/hugo
